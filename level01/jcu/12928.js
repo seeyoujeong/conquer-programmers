@@ -1,4 +1,5 @@
 // 약수의 합
+
 function solution(n) {
   return Array.from({ length: n })
     .map((_, idx) => idx + 1)
