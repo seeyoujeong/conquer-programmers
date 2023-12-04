@@ -5,5 +5,3 @@ function solution(arr, divisor) {
 
   return filterArr.length > 0 ? filterArr.sort((a, b) => a - b) : [-1];
 }
-
-// TODO 없는 숫자 더하기
