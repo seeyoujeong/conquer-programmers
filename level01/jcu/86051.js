@@ -5,5 +5,3 @@ function solution(numbers) {
     .filter((num) => !numbers.includes(num))
     .reduce((acc, cur) => acc + cur, 0);
 }
-
-// TODO 핸드폰 번호 가리기
