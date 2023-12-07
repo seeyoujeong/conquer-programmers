@@ -5,5 +5,3 @@ function solution(arr) {
   const filteredArr = arr.filter((num) => num !== minNumber);
   return filteredArr.length > 0 ? filteredArr : [-1];
 }
-
-// TODO 가운데 글자 가져오기
