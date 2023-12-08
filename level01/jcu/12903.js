@@ -8,5 +8,3 @@ function solution(s) {
     ? s[middleIndex - 1] + s[middleIndex]
     : s[middleIndex];
 }
-
-// TODO 내적
