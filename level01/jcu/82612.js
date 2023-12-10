@@ -8,5 +8,3 @@ function solution(price, money, count) {
 
   return result > 0 ? 0 : -result;
 }
-
-// TODO 문자열 다루기 기본
