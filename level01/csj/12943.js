@@ -2,10 +2,13 @@
 
 function solution(num) {
   let count = 0;
-  while (count++ <= 500) {
-    if (num % 2 === 0) num = num / 2;
-    else num = num * 3 + 1;
-    if (num === 1) return count;
+  while (num !== 1 && count <= 500) {
+    count += 1;
+    if (num % 2) {
+      num = num * 3 + 1;
+    } else {
+      num /= 2;
+    }
   }
-  return -1;
+  return num === 1 ? count : -1;
 }
