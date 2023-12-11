@@ -5,5 +5,3 @@ function solution(arr1, arr2) {
     row.map((col, idx1) => col + arr2[idx0][idx1])
   );
 }
-
-// TODO 직사각형 별찍기
