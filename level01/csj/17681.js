@@ -4,15 +4,8 @@ function solution(n, arr1, arr2) {
   const baseMap = Array.from({ length: n }).fill('0'.repeat(n));
   const parseMap = (base, arr) => {
     return base.map((row, i) => {
-      let binary = arr[i].toString(2);
-      while (binary.length < n) {
-        binary = '0' + binary;
-      }
-      return [...row]
-        .map((value, j) =>
-          value === '1' || binary[j] === '1' ? '1' : '0'
-        )
-        .join('');
+      const binary = arr[i].toString(2).padStart(n, '0');
+      return [...row].map((value, j) => value | binary[j]).join('');
     });
   };
   return parseMap(parseMap(baseMap, arr1), arr2).map((row) =>
