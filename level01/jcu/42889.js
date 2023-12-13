@@ -1,20 +1,18 @@
 // 실패율
 
 function solution(N, stages) {
-  return Array.from({ length: N }, (_, idx) => idx + 1)
-    .map((stage) => [stage, getFailureRate(stage, stages)])
+  let reached = stages.length;
+  const stageCount = Array(N + 1).fill(0);
+
+  stages.forEach((stage) => (stageCount[stage] += 1));
+
+  return Array.from({ length: N }, (_, i) => {
+    const currentReached = reached;
+    const notClear = stageCount[i + 1];
+    reached -= notClear;
+
+    return [i + 1, notClear / currentReached];
+  })
     .sort((a, b) => b[1] - a[1])
-    .map(([stage, _]) => stage);
-}
-
-function getNotClearedCount(stage, stages) {
-  return stages.filter((currentStage) => stage === currentStage).length;
-}
-
-function getReachedCount(stage, stages) {
-  return stages.filter((currentStage) => currentStage >= stage).length;
-}
-
-function getFailureRate(stage, stages) {
-  return getNotClearedCount(stage, stages) / getReachedCount(stage, stages);
+    .map(([stage]) => stage);
 }
