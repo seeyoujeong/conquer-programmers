@@ -1,3 +1,5 @@
+// 숫자 짝꿍
+
 function solution(X, Y) {
   const xNums = [...X].sort();
   const yNums = [...Y].sort();

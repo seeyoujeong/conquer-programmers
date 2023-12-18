@@ -1,3 +1,5 @@
+// 체육복
+
 function solution(n, lost, reserve) {
   const noSuit = lost.filter((num) => !reserve.includes(num)).sort();
   const moreSuit = reserve.filter((num) => !lost.includes(num));

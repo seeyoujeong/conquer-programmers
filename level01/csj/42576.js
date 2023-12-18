@@ -1,3 +1,5 @@
+// 완주하지 못한 선수
+
 const makeCounts = (arr) =>
   arr.reduce((acc, cur) => {
     if (!(cur in acc)) acc[cur] = 0;
@@ -6,11 +8,6 @@ const makeCounts = (arr) =>
   }, {});
 
 function solution(participant, completion) {
-  const participantCounts = makeCounts(participant);
   const completionCounts = makeCounts(completion);
-
-  return Object.entries(participantCounts).find(
-    ([name, count]) =>
-      !(name in completionCounts && count === completionCounts[name])
-  )[0];
+  return participant.find((name) => !completionCounts[name]--);
 }

@@ -1,3 +1,5 @@
+// 문자열 나누기
+
 function solution(s) {
   let word = s;
   let answer = 0;

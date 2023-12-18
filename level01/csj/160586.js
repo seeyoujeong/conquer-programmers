@@ -1,3 +1,5 @@
+// 대충 만든 자판
+
 function solution(keymap, targets) {
   const charSet = [
     ...new Set(targets.reduce((acc, cur) => [...acc, ...cur], [])),
