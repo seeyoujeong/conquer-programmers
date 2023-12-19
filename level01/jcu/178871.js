@@ -19,4 +19,4 @@ function solution(players, callings) {
   return players;
 }
 
-// TODO 키패드 누르기, 공원 산책, 신고 결과 받기
+// TODO 키패드 누르기
