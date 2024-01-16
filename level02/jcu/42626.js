@@ -1,3 +1,5 @@
+// 더 맵게
+
 function solution(scoville, K) {
   let count = 0;
   const minHeap = new MinHeap();
