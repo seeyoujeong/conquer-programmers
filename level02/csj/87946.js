@@ -1,3 +1,5 @@
+// 피로도
+
 function solution(k, dungeons) {
   const travelDungeon = (current, dungeons, fatigue) => {
     if (dungeons.length === 0) {
